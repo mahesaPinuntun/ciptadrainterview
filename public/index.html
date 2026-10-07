@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esa's Agent - AI & Contact Center</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <span class="logo">Esa's <span class="logo-accent">Agent</span></span>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <button id="lang-toggle" class="btn-toggle" aria-label="Toggle Language" style="font-size: 0.85rem; font-weight: 700; width: auto; padding: 6px 12px; border-radius: 9999px; border: 1px solid var(--border-color);">
+                    <span id="lang-label">EN</span>
+                </button>
+
+                <button id="theme-toggle" class="btn-toggle" aria-label="Toggle Dark Mode">
+                    <svg id="theme-toggle-dark-icon" class="hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                </button>
+
+                <a href="#cta" class="btn-outline" data-key="nav_sales">Hubungi Sales</a>
+            </div>
+        </div>
+    </header>
+
+    <main style="flex-grow: 1;">
+        <section class="hero container">
+            <div class="hero-content">
+                <div class="hero-accent-bar"></div>
+                <h1 class="hero-title" data-key="hero_title">AI dan Implementasi AI <br>di Industri Contact Center</h1>
+                <p class="hero-desc" data-key="hero_desc">
+                    Pendekatan minimalis dan cerdas untuk melayani pelanggan. Tingkatkan efisiensi agen, kurangi waktu tunggu, dan hadirkan pengalaman efisiensi teknologi AI dari kami.
+                </p>
+                <div class="hero-action">
+                    <a href="#fitur" class="btn-primary">
+                        <span data-key="hero_btn">Pelajari Implementasi AI</span>
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bento Grid Features Section -->
+        <section id="fitur" class="features">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-key="features_title">Penerapan</h2>
+                    <p class="section-desc" data-key="features_desc">Tiga pilar utama transformasi operasional contact center melalui kecerdasan buatan.</p>
+                </div>
+
+                <div class="grid-features">
+                    <!-- Kartu 1 (Bento Span 2) -->
+                    <div class="card bento-card-1">
+                        <div class="card-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="card-title" data-key="card1_title">Chatbot Cerdas 24/7</h3>
+                            <p class="card-desc" data-key="card1_desc">Interaksi berbasis Natural Language Processing (NLP) yang mampu menangani keluhan dasar secara instan, tanpa intervensi agen manusia, kapan pun pelanggan membutuhkannya.</p>
+                        </div>
+                    </div>
+
+                    <!-- Kartu 2 (Bento Span 1) -->
+                    <div class="card bento-card-2">
+                        <div class="card-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="card-title" data-key="card2_title">Analisis Sentimen Otomatis</h3>
+                            <p class="card-desc" data-key="card2_desc">Sistem secara otomatis membaca nada dan emosi dari pesan teks atau suara pelanggan, memberikan wawasan real-time kepada agen untuk merespons dengan tingkat empati yang tepat.</p>
+                        </div>
+                    </div>
+
+                    <!-- Kartu 3 (Bento Span 3 / Full Width Bottom) -->
+                    <div class="card bento-card-3">
+                        <div class="card-icon">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="card-title" data-key="card3_title">Smart Ticket Routing</h3>
+                            <p class="card-desc" data-key="card3_desc">Algoritma cerdas yang mendistribusikan tiket atau panggilan masuk secara otomatis ke agen spesifik berdasarkan keahlian, beban kerja, dan sejarah interaksi pelanggan sebelumnya.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta" class="cta container">
+            <h2 class="cta-title" data-key="cta_title">Mulai Tingkatkan Layanan Anda</h2>
+            <p class="cta-desc" data-key="cta_desc">Jadwalkan konsultasi dengan tim ahli kami untuk melihat bagaimana AI dapat disesuaikan dengan alur kerja contact center spesifik Anda.</p>
+            
+            <div class="cta-buttons">
+                <a href="#" class="btn-contact">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.012c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                    </svg>
+                    WhatsApp Esa
+                </a>
+                
+                <a href="#" class="btn-contact">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    Email Esa
+                </a>
+
+                <a href="#" class="btn-contact">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                    Facebook Esa
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-top">
+            <div class="flex items-center gap-2">
+                <span class="logo">Esa's <span class="logo-accent">Agent</span></span>
+            </div>
+        </div>
+        
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Esa's Agent.</p>
+            <div class="footer-links">
+                <a href="#" data-key="footer_privacy">Privasi</a>
+                <a href="#" data-key="footer_terms">Ketentuan</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
